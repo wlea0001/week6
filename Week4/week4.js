@@ -15,7 +15,7 @@ app.use(bodyParser.urlencoded({
 // parse application/json
 app.use(bodyParser.json())
 
-//Setup the static assets directories
+//Setup thegit static assets directories
 app.use(express.static('images'));
 app.use(express.static('css'));
 app.get('/', function (req, res) {
