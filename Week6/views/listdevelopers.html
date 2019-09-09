@@ -1,0 +1,37 @@
+<html>
+<head>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        table,th,td {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+        <h1>List Developers</h1> </br>
+        <h1> <a href="/">Home</a>
+            <a href="/newTask">Add New Task</a> 
+            <a href="/listTasks">List All Task</a>
+            <a href="/deleteTask">Delete Task</a>
+            <a href="/updatetask">Update Tasks</a>
+            <a href="/addDeveloper">Add New Developer</a>
+            <a href="/deleteCompletedTasks">Delete Completed Tasks</a>
+        </h1>
+        <table>
+            <tr>
+                <td>ID</td>
+                <td>Name</td>
+                <td>Level</td>
+                <td>address</td>
+            </tr>
+            <% for (let i=0;i<db.length;i++){ %>
+                <tr>
+                    <td><%= db[i]._id %> </td>
+                    <td> <%= db[i].name %> </td>
+                    <td> <%= db[i].level %> </td>
+                    <td> <%= db[i].address %> </td>
+                </tr>
+                <%}%>
+        </table>
+    </body>
+</html>

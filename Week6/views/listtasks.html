@@ -1,0 +1,99 @@
+<html>
+<head>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        table,th,td {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+        <h1>List Tasks</h1> </br>
+        <h1> <a href="/">Home</a>
+            <a href="/newTask">Add New Task</a> 
+            <a href="/listTasks">List All Task</a>
+            <a href="/deleteTask">Delete Task</a>
+            <a href="/updatetask">Update Tasks</a>
+            <a href="/addDeveloper">Add New Developer</a>
+            <a href="/listDevelopers">List All Developers</a></br>
+            <a href="/deleteCompletedTasks">Delete Completed Tasks</a>
+        </h1>
+        <table>
+            <tr>
+                <td>ID</td>
+                <td>Name</td>
+                <td>Assigned To</td>
+                <td>Due Date</td>
+                <td>Status</td>
+                <td>Description</td>
+            </tr>
+            <% for (let i=0;i<db.length;i++){ %>
+                <tr>
+                    <td><%= db[i]._id %> </td>
+                    <td> <%= db[i].name %> </td>
+                    <td> <%= db[i].assignTo %> </td>
+                    <td> <%= db[i].dueDate %> </td>
+                    <td> <%= db[i].status %> </td>
+                    <td><%= db[i].description %></td>
+                </tr>
+                <%}%>
+        </table>
+    </body>
+</html>
+
+<!-- <html>
+        <head>
+                <link rel="stylesheet" href="styles.css">
+        </head>
+<body>
+    <h1>Update User</h1></br>
+    <h1>
+        <a href="/">Insert Users</a>
+        <a href="/newtask">List Tasks</a>
+    </h1>
+    <form action="/listtask" method="POST">
+        Task Name <input type="text" method="POST" name="taskname" /> </br>
+        Task Due <input type="text" method="POST" name="taskdue" /> </br>
+        Task Description <input type="text" method="POST" name="taskdesc" /> </br>
+        <input type="submit" value="Submit" /> </br>
+    </form>
+</body>
+</html> -->
+
+<!-- <html>
+<head>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        table,th,td {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <h1> <a href="http://localhost:8080">Home</a> 
+        <a href="http://localhost:8080/newtask">Add New Task</a>
+    </h1>
+    </br>
+    <h3>The available cars are:
+        <table>
+            <tr>
+                <td>Name</td>
+                <td>Due Date</td>
+                <td>Description</td>
+            </tr>
+            <% for ( var i =0; i< db.length;i++){ %>
+                <tr>
+                    <td>
+                        <%= db[i].taskname %>
+                    </td>
+                    <td>
+                        <%= db[i].taskdue %>
+                    </td>
+                    <td>
+                        <%= db[i].taskdesc %>
+                    </td>
+                </tr>
+                <% }%>
+    </h3>
+</body>
+</html> -->
