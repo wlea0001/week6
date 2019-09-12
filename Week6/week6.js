@@ -15,7 +15,7 @@ app.listen(8080);
 const mongoose = require('mongoose');
 const Task = require('./Models/Task');
 const Developer = require('./Models/Developer');
-mongoose.connect('mongodb://localhost:27017/taskDB', { useNewUrlParser: true, useUnifiedTopology: true }, function (err) {
+mongoose.connect('mongodb://' + process.argv[2]+ ':27017/taskDB', { useNewUrlParser: true, useUnifiedTopology: true }, function (err) {
     if (err) {
         console.log('Error in Mongoose connection');
         throw err;
